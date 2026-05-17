@@ -16,4 +16,8 @@ public class DespachoController {
     public Despacho generarDespacho(@PathVariable Long idPedido) {
         return despachoService.crearDespacho(idPedido);
     }
+    @GetMapping("/{idDespacho}")
+    public Despacho obtenerDespacho(@PathVariable Long idDespacho) {
+        return despachoService.obtenerDespachoPorId(idDespacho);
+    }
 }

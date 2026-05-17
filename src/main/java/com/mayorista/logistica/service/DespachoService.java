@@ -20,4 +20,7 @@ public class DespachoService {
         despacho.setFechaEntrega(LocalDateTime.now().plusDays(2));
         return despachoRepository.save(despacho);
     }
+    public Despacho obtenerDespachoPorId(Long idDespacho) {
+        return despachoRepository.findById(idDespacho).orElse(null);
+    }
 }
